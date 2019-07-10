@@ -563,7 +563,7 @@ abstract class Pop3Handler {
             if (acct == null) {
                 throw new Pop3CmdException("LOGIN failed");
             }
-            if (!acct.getBooleanAttr(Provisioning.A_zimbraPop3Enabled, false)) {
+            if (!acct.getBooleanAttr(Provisioning.A_zimbraPop3Enabled, false) || (acct.isFeatureChangeUsePop3Enabled() && !acct.isPrefUsePop3())) {
                 throw new Pop3CmdException("pop access not enabled for account");
             }
             accountId = acct.getId();

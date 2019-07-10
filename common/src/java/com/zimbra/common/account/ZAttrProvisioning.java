@@ -6326,6 +6326,28 @@ public class ZAttrProvisioning {
     public static final String A_zimbraFeatureChangePasswordEnabled = "zimbraFeatureChangePasswordEnabled";
 
     /**
+     * whether to allow end user to disable IMAP feature. If it is set to
+     * TRUE, IMAP feature is available only when both zimbraImapEnabled and
+     * zimbraPrefUseImap are TRUE. If it is set to FALSE, zimbraPrefUseImap
+     * is ignored.
+     *
+     * @since ZCS 8.8.15
+     */
+    @ZAttr(id=3077)
+    public static final String A_zimbraFeatureChangeUseImapEnabled = "zimbraFeatureChangeUseImapEnabled";
+
+    /**
+     * whether to allow end user to disable POP3 feature. If it is set to
+     * TRUE, POP3 feature is available only when both zimbraPop3Enabled and
+     * zimbraPrefUsePop3 are TRUE. If it is set to FALSE, zimbraPrefUsePop3
+     * is ignored.
+     *
+     * @since ZCS 8.8.15
+     */
+    @ZAttr(id=3078)
+    public static final String A_zimbraFeatureChangeUsePop3Enabled = "zimbraFeatureChangeUsePop3Enabled";
+
+    /**
      * Whether to enable chat feature
      *
      * @since ZCS 8.7.0,9.0.0
@@ -14069,10 +14091,28 @@ public class ZAttrProvisioning {
     public static final String A_zimbraPrefUseDefaultIdentitySettings = "zimbraPrefUseDefaultIdentitySettings";
 
     /**
+     * whether to use IMAP feature. See also
+     * zimbraFeatureChangeUseImapEnabled
+     *
+     * @since ZCS 8.8.15
+     */
+    @ZAttr(id=3079)
+    public static final String A_zimbraPrefUseImap = "zimbraPrefUseImap";
+
+    /**
      * whether or not keyboard shortcuts are enabled
      */
     @ZAttr(id=61)
     public static final String A_zimbraPrefUseKeyboardShortcuts = "zimbraPrefUseKeyboardShortcuts";
+
+    /**
+     * whether to use POP3 feature. See also
+     * zimbraFeatureChangeUsePop3Enabled
+     *
+     * @since ZCS 8.8.15
+     */
+    @ZAttr(id=3080)
+    public static final String A_zimbraPrefUsePop3 = "zimbraPrefUsePop3";
 
     /**
      * When composing and sending mail, whether to use RFC 2231 MIME

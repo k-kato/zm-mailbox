@@ -1084,7 +1084,7 @@ TODO - add support for multi-line values in globalConfigValue and defaultCOSValu
   <desc>whether or not to index attachments</desc>
 </attr>
 
-<attr id="174" name="zimbraImapEnabled" type="boolean" cardinality="single" optionalIn="account,cos" flags="accountInherited,domainAdminModifiable">
+<attr id="174" name="zimbraImapEnabled" type="boolean" cardinality="single" optionalIn="account,cos" flags="accountInfo,accountInherited,domainAdminModifiable">
   <defaultCOSValue>TRUE</defaultCOSValue>
   <defaultExternalCOSValue>FALSE</defaultExternalCOSValue>
   <desc>whether IMAP is enabled for an account</desc>
@@ -9760,6 +9760,34 @@ TODO: delete them permanently from here
 
 <attr id="3076" name="zimbraAddressListLdapFilter" type="string" cardinality="single" requiredIn="addressList" flags="domainAdminModifiable" since="8.8.10">
   <desc>filter to decide members of the address list using ldap</desc>
+</attr>
+
+<attr id="3077" name="zimbraFeatureChangeUseImapEnabled" type="boolean" cardinality="single" optionalIn="account,cos" flags="accountInfo,accountInherited,domainAdminModifiable" since="8.8.15">
+  <defaultCOSValue>FALSE</defaultCOSValue>
+  <desc>
+    whether to allow end user to disable IMAP feature.
+    If it is set to TRUE, IMAP feature is available only when both zimbraImapEnabled and zimbraPrefUseImap are TRUE.
+    If it is set to FALSE, zimbraPrefUseImap is ignored.
+  </desc>
+</attr>
+
+<attr id="3078" name="zimbraFeatureChangeUsePop3Enabled" type="boolean" cardinality="single" optionalIn="account,cos" flags="accountInfo,accountInherited,domainAdminModifiable" since="8.8.15">
+  <defaultCOSValue>FALSE</defaultCOSValue>
+  <desc>
+    whether to allow end user to disable POP3 feature.
+    If it is set to TRUE, POP3 feature is available only when both zimbraPop3Enabled and zimbraPrefUsePop3 are TRUE.
+    If it is set to FALSE, zimbraPrefUsePop3 is ignored.
+  </desc>
+</attr>
+
+<attr id="3079" name="zimbraPrefUseImap" type="boolean" cardinality="single" optionalIn="account,cos" flags="accountInherited,domainAdminModifiable" since="8.8.15">
+  <defaultCOSValue>TRUE</defaultCOSValue>
+  <desc>whether to use IMAP feature. See also zimbraFeatureChangeUseImapEnabled</desc>
+</attr>
+
+<attr id="3080" name="zimbraPrefUsePop3" type="boolean" cardinality="single" optionalIn="account,cos" flags="accountInherited,domainAdminModifiable" since="8.8.15">
+  <defaultCOSValue>TRUE</defaultCOSValue>
+  <desc>whether to use POP3 feature. See also zimbraFeatureChangeUsePop3Enabled</desc>
 </attr>
 
 </attrs>
