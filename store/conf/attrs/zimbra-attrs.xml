@@ -9790,4 +9790,9 @@ TODO: delete them permanently from here
   <desc>whether to use POP3 feature. See also zimbraFeatureChangeUsePop3Enabled</desc>
 </attr>
 
+<attr id="3081" name="zimbraFeatureWebClientEnabled" type="boolean" cardinality="single" optionalIn="account,cos" flags="accountInfo,accountInherited,domainAdminModifiable" since="8.8.15">
+  <defaultCOSValue>TRUE</defaultCOSValue>
+  <desc>whether to use Web Client feature</desc>
+</attr>
+
 </attrs>

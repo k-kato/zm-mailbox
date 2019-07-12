@@ -7009,6 +7009,14 @@ public class ZAttrProvisioning {
     public static final String A_zimbraFeatureVoiceUpsellURL = "zimbraFeatureVoiceUpsellURL";
 
     /**
+     * whether to use Web Client feature
+     *
+     * @since ZCS 8.8.15
+     */
+    @ZAttr(id=3081)
+    public static final String A_zimbraFeatureWebClientEnabled = "zimbraFeatureWebClientEnabled";
+
+    /**
      * admin setting to enable/disable the web client offline access feature
      *
      * @since ZCS 8.5.0
