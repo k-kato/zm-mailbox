@@ -394,7 +394,11 @@
     <a n="zimbraZimletAvailableZimlets"/>
     <a n="zimbraZimletLoadSynchronously"/>
     <a n="zimbraZimletUserProperties"/>
-
+    <a n="zimbraFeatureWebClientEnabled"/>
+    <a n="zimbraFeatureChangeUseImapEnabled"/>
+    <a n="zimbraFeatureChangeUsePop3Enabled"/>
+    <a n="zimbraPrefUseImap"/>
+    <a n="zimbraPrefUsePop3"/>
   </attrs>
 </right>
 
